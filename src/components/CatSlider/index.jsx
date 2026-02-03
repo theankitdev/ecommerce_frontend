@@ -1,6 +1,5 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
@@ -18,7 +17,7 @@ const categories = [
 
 const CatSlider = () => {
   return (
-    <div className="catSlider pt-4 pb-8 overflow-hidden">
+    <div className="catSlider md:pt-4 pb-4 md:pb-8 overflow-hidden">
       <div className="container">
         <Swiper
           spaceBetween={12}

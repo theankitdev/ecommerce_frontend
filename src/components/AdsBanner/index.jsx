@@ -1,6 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
@@ -12,20 +12,32 @@ const ads = [
     { img: "/smartphoneAds.webp", slug: "smartphones" },
 ];
 
-const AdsBanner = (props) => {
+const AdsBanner = () => {
     return (
-        <div className='container w-full overflow-hidden'>
+        <div className='md:py-6 py-2  w-full overflow-hidden'>
             <Swiper
-                slidesPerView={props.items}
                 spaceBetween={10}
                 navigation={true}
-                modules={[Navigation]}
+                loop={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                modules={[Autoplay, Navigation]}
+                breakpoints={{
+                    0: { slidesPerView: 1, },
+                    480: { slidesPerView: 2 },
+                    768: { slidesPerView: 3 },
+                    1024: { slidesPerView: 4 }
+                }}
+                className='overflow-visible smlBtn'
             >
                 {ads.map(ad => (
                     <SwiperSlide key={ad.slug}>
                         <Link to={`/category/${ad.slug}`}>
-                            <div className='rounded-md'>
-                                <img src={ad.img} className='w-full' alt='ad'/>
+                            <div className='overflow-hidden rounded-md group'>
+                                <img src={ad.img} className='w-full transition-all group-hover:scale-105
+                                  group-hover:rotate-2' alt={ad.slug} />
                             </div>
                         </Link>
                     </SwiperSlide>
