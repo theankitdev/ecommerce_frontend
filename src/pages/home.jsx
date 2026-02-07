@@ -8,6 +8,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import ProductSlider from '../components/ProductSlider';
 import BlogSection from '../components/Blog';
+import Footer from '../components/Footer';
 
 const Home = () => {
   const [value, setValue] = React.useState(0);
@@ -30,7 +31,7 @@ const Home = () => {
               <p className='lg:text-[14px] text-[12px] md:text-[13px]'>Do not miss the current offers until the end of March.</p>
             </div>
 
-            <div className="rightSec lg:w-[60%]">
+            <div className="rightSec lg:w-[60%] ">
               <Box sx={{ bgcolor: 'background.paper' }}>
                 <Tabs
                   value={value}
@@ -185,6 +186,7 @@ const Home = () => {
       </section>
 
       {/* Footer */}
+      <Footer />
     </>
   )
 }

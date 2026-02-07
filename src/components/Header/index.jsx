@@ -33,7 +33,7 @@ const Header = () => {
                 <div className='container'>
                     <div className='flex items-center justify-between'>
                         <div className='col1 w-[50%]'>
-                            <p className='text-[12px] font-medium'>
+                            <p className='text-[12px] font-medium text-gray-600'>
                                 Get up to 50% off new season styles, limited time only
                             </p>
                         </div>
@@ -41,11 +41,11 @@ const Header = () => {
                         <div className='col2 flex items-center justify-end'>
                             <ul className='flex items-center gap-3'>
                                 <li className='list-none'>
-                                    <Link to="/help-center" className='text-[12px] link font-medium transition'>Help Center</Link>
+                                    <Link to="/help-center" className='text-[12px] link font-medium transition text-gray-600'>Help Center</Link>
                                 </li>
                                 <div className='border h-4 border-gray-300' />
                                 <li className='list-none'>
-                                    <Link to="/order-tracking" className='text-[12px] link font-medium transition'>Order Tracking</Link>
+                                    <Link to="/order-tracking" className='text-[12px] link font-medium transition text-gray-600'>Order Tracking</Link>
                                 </li>
                             </ul>
                         </div>

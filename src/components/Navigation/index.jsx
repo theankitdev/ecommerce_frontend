@@ -12,7 +12,7 @@ const Navigation = () => {
             <nav className='container flex items-center gap-10 py-2 shadow-md w-full'>
                 {/* Shop by Categories */}
                 <div className='col_1 hidden lg:flex justify-start xl:w-[23%]'>
-                    <Button className='!text-black gap-3 !font-[500] hover:!text-[#ff5252]'
+                    <Button className='!text-gray-700 gap-3 font-semibold! !font-[500] hover:!text-[#ff5252]'
                         onClick={() => setDrawerOpen(true)}
                     >
                         <RiMenu2Fill className='text-[18px]' />
@@ -30,7 +30,7 @@ const Navigation = () => {
                             <Button
                                 component={Link}
                                 to="/"
-                                className="!normal-case !text-gray-700 text-[14px]  hover:!text-[#ff5252] transition"
+                                className="!normal-case !text-gray-700 !font-semibold text-[14px]  hover:!text-[#ff5252] transition"
                                 sx={{ textTransform: "none" }}
                             >
                                 Home
@@ -42,7 +42,7 @@ const Navigation = () => {
                             <Button
                                 component={Link}
                                 to="/fashion"
-                                className="!normal-case !text-gray-700 hover:!text-[#ff5252] transition"
+                                className="!normal-case !text-gray-700 font-semibold! hover:!text-[#ff5252] transition"
                                 sx={{ textTransform: "none" }}
                             >
                                 Fashion
@@ -52,7 +52,7 @@ const Navigation = () => {
                             <div className='submenu absolute top-[100%] min-w-[150px] shadow-md bg-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50'>
                                 <ul className=''>
                                     <li className='list-none group/sub relative w-full'>
-                                        <Button className='!text-gray-700 !capitalize w-full !justify-start hover:!text-[#ff5252]'
+                                        <Button className='!text-gray-900  !capitalize w-full !justify-start hover:!text-[#ff5252]'
                                             component={Link}
                                             to={'/'}
                                         >
@@ -63,7 +63,7 @@ const Navigation = () => {
                                         <div className='submenu absolute top-0 left-full min-w-[150px] shadow-md bg-white opacity-0 invisible group-hover/sub:opacity-100 group-hover:visible transition-all duration-200'>
                                             <ul className=''>
                                                 <li className='list-none'>
-                                                    <Button className='!text-gray-700 !capitalize w-full !justify-start hover:!text-[#ff5252]'
+                                                    <Button className='!text-gray-900 !capitalize w-full !justify-start hover:!text-[#ff5252]'
                                                         component={Link}
                                                         to={'/'}
                                                     >
@@ -145,7 +145,7 @@ const Navigation = () => {
                             <Button
                                 component={Link}
                                 to="/electronics"
-                                className="!normal-case !text-gray-700 hover:!text-[#ff5252] transition"
+                                className="!normal-case !text-gray-700 font-semibold! hover:!text-[#ff5252] transition"
                                 sx={{ textTransform: "none" }}
                             >
                                 Electronics
@@ -156,7 +156,7 @@ const Navigation = () => {
                             <Button
                                 component={Link}
                                 to="/bags"
-                                className="!normal-case !text-gray-700 hover:!text-[#ff5252] transition"
+                                className="!normal-case !text-gray-700 font-semibold! hover:!text-[#ff5252] transition"
                                 sx={{ textTransform: "none" }}
                             >
                                 Bags
@@ -167,7 +167,7 @@ const Navigation = () => {
                             <Button
                                 component={Link}
                                 to="/footwear"
-                                className="!normal-case !text-gray-700 hover:!text-[#ff5252] transition"
+                                className="!normal-case !text-gray-700 font-semibold! hover:!text-[#ff5252] transition"
                                 sx={{ textTransform: "none" }}
                             >
                                 Footwear
@@ -178,7 +178,7 @@ const Navigation = () => {
                             <Button
                                 component={Link}
                                 to="/groceries"
-                                className="!normal-case !text-gray-700 hover:!text-[#ff5252] transition"
+                                className="!normal-case !text-gray-700 font-semibold! hover:!text-[#ff5252] transition"
                                 sx={{ textTransform: "none" }}
                             >
                                 Groceries
@@ -189,7 +189,7 @@ const Navigation = () => {
                             <Button
                                 component={Link}
                                 to="/beauty"
-                                className="!normal-case !text-gray-700 hover:!text-[#ff5252] transition"
+                                className="!normal-case !text-gray-700 font-semibold! hover:!text-[#ff5252] transition"
                                 sx={{ textTransform: "none" }}
                             >
                                 Beauty
@@ -200,7 +200,7 @@ const Navigation = () => {
                             <Button
                                 component={Link}
                                 to="/wellness"
-                                className="!normal-case !text-gray-700 hover:!text-[#ff5252] transition"
+                                className="!normal-case !text-gray-700 font-semibold! hover:!text-[#ff5252] transition"
                                 sx={{ textTransform: "none" }}
                             >
                                 Wellness
