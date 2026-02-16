@@ -17,7 +17,7 @@ const ProductSlider = () => {
         modules={[Navigation]}
       >
         {products.map(product => (
-          <SwiperSlide key={product.id} className='!w-auto'>
+          <SwiperSlide key={product.id} className='w-[160px]! sm:!w-auto'>
             <ProductItem product={product} />
           </SwiperSlide>
         ))}

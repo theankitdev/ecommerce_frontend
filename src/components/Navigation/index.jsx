@@ -9,7 +9,7 @@ const Navigation = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
     return (
         <>
-            <nav className='container flex items-center gap-10 py-2 shadow-md w-full'>
+            <nav className='container flex items-center gap-10 lg:py-2 shadow-md w-full'>
                 {/* Shop by Categories */}
                 <div className='col_1 hidden lg:flex justify-start xl:w-[23%]'>
                     <Button className='!text-gray-700 gap-3 font-semibold! !font-[500] hover:!text-[#ff5252]'

@@ -7,8 +7,10 @@ import { FaRegHeart } from "react-icons/fa";
 
 const ProductItem = ({ product }) => {
   return (
-    <div className="productItem shadow-md border border-[rgba(0,0,0,0.1)] rounded-md w-[160px] sm:w-[180px] md:w-[220px]">
-      
+    <Link 
+      to={`/product/${product.id}`} 
+      className="block productItem shadow-md border border-[rgba(0,0,0,0.1)] rounded-md sm:w-[180px] md:w-[220px] hover:shadow-lg transition"
+    >
       {/* Image */}
       <div className="imgWrapper w-full  rounded-t-md overflow-hidden relative group">
         <div className="img md:h-50 h-[150px] overflow-hidden">
@@ -50,7 +52,7 @@ const ProductItem = ({ product }) => {
           <span className="price text-[#ff5252] font-semibold">${product.price}</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

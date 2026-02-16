@@ -8,7 +8,8 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import ProductSlider from '../components/ProductSlider';
 import BlogSection from '../components/Blog';
-import Footer from '../components/Footer';
+import HomeBannerV2 from '../components/HomeBannerV2';
+import AdsBannerV2 from '../components/AdsBannerV2';
 
 const Home = () => {
   const [value, setValue] = React.useState(0);
@@ -49,14 +50,14 @@ const Home = () => {
                     },
                   }}
                 >
-                  <Tab label="Fashion" sx={{fontSize:{xs: '13px',md: '14px'}}} />
-                  <Tab label="Electronics" sx={{fontSize:{xs: '13px',md: '14px'}}}/>
-                  <Tab label="Bags" sx={{fontSize:{xs: '13px',md: '14px'}}}/>
-                  <Tab label="Footwear" sx={{fontSize:{xs: '13px',md: '14px'}}}/>
-                  <Tab label="Groceries" sx={{fontSize:{xs: '13px',md: '14px'}}}/>
-                  <Tab label="Beauty" sx={{fontSize:{xs: '13px',md: '14px'}}}/>
-                  <Tab label="Wellness" sx={{fontSize:{xs: '13px',md: '14px'}}}/>
-                  <Tab label="Jewellery" sx={{fontSize:{xs: '13px',md: '14px'}}}/>
+                  <Tab label="Fashion" sx={{ fontSize: { xs: '13px', md: '14px' } }} />
+                  <Tab label="Electronics" sx={{ fontSize: { xs: '13px', md: '14px' } }} />
+                  <Tab label="Bags" sx={{ fontSize: { xs: '13px', md: '14px' } }} />
+                  <Tab label="Footwear" sx={{ fontSize: { xs: '13px', md: '14px' } }} />
+                  <Tab label="Groceries" sx={{ fontSize: { xs: '13px', md: '14px' } }} />
+                  <Tab label="Beauty" sx={{ fontSize: { xs: '13px', md: '14px' } }} />
+                  <Tab label="Wellness" sx={{ fontSize: { xs: '13px', md: '14px' } }} />
+                  <Tab label="Jewellery" sx={{ fontSize: { xs: '13px', md: '14px' } }} />
                 </Tabs>
               </Box>
             </div>
@@ -66,13 +67,11 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Ads Banner */}
+      {/* Free Shipping Banner */}
       <section className="bg-white">
-        <div className="container">
-          {/* Free Shipping Banner */}
-          <div className="flex justify-center mb-6 pt-3 lg:pt-0">
-            <div
-              className="
+        <div className="container flex justify-center pb-6 pt-3 lg:pt-0">
+          <div
+            className="
               freeShipping
               w-full
               md:w-[80%]
@@ -85,96 +84,118 @@ const Home = () => {
               p-4  lg:p-6
               text-center lg:text-left
             "
-            >
-              {/* Left */}
-              <div className="flex items-center justify-center lg:justify-start gap-3">
-                <LiaShippingFastSolid className="text-[36px] lg:text-[50px]" />
-                <span className="text-[18px] lg:text-[20px] font-[600] uppercase">
-                  Free Shipping
-                </span>
-              </div>
+          >
+            {/* Left */}
+            <div className="flex items-center justify-center lg:justify-start gap-3">
+              <LiaShippingFastSolid className="text-[36px] lg:text-[50px]" />
+              <span className="text-[18px] lg:text-[20px] font-[600] uppercase">
+                Free Shipping
+              </span>
+            </div>
 
-              {/* Middle */}
-              <div>
-                <p className="font-[500] text-[14px] lg:text-[16px]">
-                  Free delivery now on your first order and over $200
-                </p>
-              </div>
+            {/* Middle */}
+            <div>
+              <p className="font-[500] text-[14px] lg:text-[16px]">
+                Free delivery now on your first order and over $200
+              </p>
+            </div>
 
-              {/* Right */}
-              <div className="font-bold text-[20px] lg:text-[25px] mt-3 lg:mt-0">
-                - Only $200*
-              </div>
+            {/* Right */}
+            <div className="font-bold text-[20px] lg:text-[25px] mt-3 lg:mt-0">
+              - Only $200*
             </div>
           </div>
-
-          <AdsBanner items={4} />
         </div>
       </section>
+
+      {/* Home Banner V2 */}
+      <section className="bg-white py-6 w-full">
+  <div
+    className="
+      container
+      grid
+      grid-cols-1
+      gap-6
+      lg:grid-cols-[70%_29%]
+      items-center
+    "
+  >
+    {/* PART 1 */}
+    <div className="w-full">
+      <HomeBannerV2 />
+    </div>
+
+    {/* PART 2 */}
+    <div className="w-full">
+      <AdsBannerV2 />
+    </div>
+  </div>
+</section>
+
 
       {/* Latest Product Section */}
       <section className='py-2 bg-white'>
         <div className='container'>
-           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Latest Products</h2>
-           <ProductSlider />
+          <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Latest Products</h2>
+          <ProductSlider />
         </div>
       </section>
 
       {/* Featured Product Section */}
       <section className='pb-2 bg-white'>
         <div className='container'>
-           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Featured Products</h2>
-           <ProductSlider />
+          <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Featured Products</h2>
+          <ProductSlider />
 
-           <AdsBanner items={4} />
+          <AdsBanner items={4} />
         </div>
       </section>
 
-       {/* Jewellery Section */}
+      {/* Jewellery Section */}
       <section className='pb-2 bg-white'>
         <div className='container'>
-           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Jewellery</h2>
-           <ProductSlider />
+          <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Jewellery</h2>
+          <ProductSlider />
         </div>
       </section>
 
-       {/* Wellness Section */}
+      {/* Wellness Section */}
       <section className='pb-2 bg-white'>
         <div className='container'>
-           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Wellness</h2>
-           <ProductSlider />
+          <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Wellness</h2>
+          <ProductSlider />
         </div>
       </section>
 
       {/* Beauty Section */}
       <section className='pb-2 bg-white'>
         <div className='container'>
-           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Beauty</h2>
-           <ProductSlider />
+          <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Beauty</h2>
+          <ProductSlider />
         </div>
       </section>
 
       {/* Bags Section */}
       <section className='pb-2 bg-white'>
         <div className='container'>
-           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Bags</h2>
-           <ProductSlider />
+          <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Bags</h2>
+          <ProductSlider />
         </div>
       </section>
 
       {/* Groceries Section */}
       <section className='pb-2 bg-white'>
         <div className='container'>
-           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Groceries</h2>
-           <ProductSlider />
+          <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Groceries</h2>
+          <ProductSlider />
         </div>
       </section>
 
       {/* Electronics Section */}
       <section className='pb-2 bg-white'>
         <div className='container'>
-           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Electronics</h2>
-           <ProductSlider />
+          <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Electronics</h2>
+          <ProductSlider />
         </div>
       </section>
 
@@ -184,9 +205,6 @@ const Home = () => {
           <BlogSection />
         </div>
       </section>
-
-      {/* Footer */}
-      <Footer />
     </>
   )
 }

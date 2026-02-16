@@ -22,39 +22,41 @@ const Footer = () => {
                 <div className='container'>
 
                     {/* Website feature label */}
-                    <div className='flex justify-center pb-16 pt-8'>
-                        <div className='flex items-center justify-between lg:w-[85%] xl:w-[70%] flex-col gap-5 lg:flex-row'>
-                            <div className='col flex flex-col items-center justify-center group'>
-                                <LiaShippingFastSolid className='text-[40px] group-hover:text-[#ff5252] group-hover:-translate-y-1' />
-                                <h3 className='text-[16px] font-semibold mt-3'>Free Shipping</h3>
-                                <p className='text-[12px] font-medium'>For all Orders Over $100</p>
+                    <div className="flex justify-center pb-16 pt-8">
+                        <div
+                            className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:w-[85%] xl:w-[70%]">
+                            <div className="col flex flex-col items-center justify-center group text-center">
+                                <LiaShippingFastSolid className="text-[40px] transition-all duration-300 group-hover:text-[#ff5252] group-hover:-translate-y-1" />
+                                <h3 className="text-[16px] font-semibold mt-3">Free Shipping</h3>
+                                <p className="text-[12px] font-medium">For all Orders Over $100</p>
                             </div>
 
-                            <div className='col flex flex-col items-center justify-center group'>
-                                <PiKeyReturn className='text-[40px] group-hover:text-[#ff5252] group-hover:-translate-y-1' />
-                                <h3 className='text-[16px] font-semibold mt-3'>30 Days Returns</h3>
-                                <p className='text-[12px] font-medium'>For an Exchange Product</p>
+                            <div className="col flex flex-col items-center justify-center group text-center">
+                                <PiKeyReturn className="text-[40px] transition-all duration-300 group-hover:text-[#ff5252] group-hover:-translate-y-1" />
+                                <h3 className="text-[16px] font-semibold mt-3">30 Days Returns</h3>
+                                <p className="text-[12px] font-medium">For an Exchange Product</p>
                             </div>
 
-                            <div className='col flex flex-col items-center justify-center group'>
-                                <IoWalletOutline className='text-[40px] group-hover:text-[#ff5252] group-hover:-translate-y-1' />
-                                <h3 className='text-[16px] font-semibold mt-3'>Secured Payment</h3>
-                                <p className='text-[12px] font-medium'>Payment Cards Accepted</p>
+                            <div className="col flex flex-col items-center justify-center group text-center">
+                                <IoWalletOutline className="text-[40px] transition-all duration-300 group-hover:text-[#ff5252] group-hover:-translate-y-1" />
+                                <h3 className="text-[16px] font-semibold mt-3">Secured Payment</h3>
+                                <p className="text-[12px] font-medium">Payment Cards Accepted</p>
                             </div>
 
-                            <div className='col flex flex-col items-center justify-center group'>
-                                <LiaGiftSolid className='text-[40px] group-hover:text-[#ff5252] group-hover:-translate-y-1' />
-                                <h3 className='text-[16px] font-semibold mt-3'>Special Gifts</h3>
-                                <p className='text-[12px] font-medium'>Our First Product Order</p>
+                            <div className="col flex flex-col items-center justify-center group text-center">
+                                <LiaGiftSolid className="text-[40px] transition-all duration-300 group-hover:text-[#ff5252] group-hover:-translate-y-1" />
+                                <h3 className="text-[16px] font-semibold mt-3">Special Gifts</h3>
+                                <p className="text-[12px] font-medium">Our First Product Order</p>
                             </div>
 
-                            <div className='col flex flex-col items-center justify-center group'>
-                                <BiSupport className='text-[40px] group-hover:text-[#ff5252] group-hover:-translate-y-1' />
-                                <h3 className='text-[16px] font-semibold mt-3'>Support 24/7</h3>
-                                <p className='text-[12px] font-medium'>Contact us AnyTime</p>
+                            <div className="col flex flex-col items-center justify-center group text-center">
+                                <BiSupport className="text-[40px] transition-all duration-300 group-hover:text-[#ff5252] group-hover:-translate-y-1" />
+                                <h3 className="text-[16px] font-semibold mt-3">Support 24/7</h3>
+                                <p className="text-[12px] font-medium">Contact us AnyTime</p>
                             </div>
                         </div>
                     </div>
+
 
                     <hr />
 
@@ -113,16 +115,16 @@ const Footer = () => {
                                 <Button className="bg-[#ff5252]! font-medium! text-[14px]! text-white! py-2! px-5!">SUBSCRIBE</Button>
                             </form>
                             <FormControlLabel control={<Checkbox />}
-                                    label="I agree to the terms and conditions and the privacy policy"
-                                    sx={{
-                                        '& .MuiFormControlLabel-label': {
-                                            fontSize: '13px',
-                                        },
-                                        '& .Mui-checked': {
-                                            color: '#ff5252'
-                                        },
-                                    }}
-                                />
+                                label="I agree to the terms and conditions and the privacy policy"
+                                sx={{
+                                    '& .MuiFormControlLabel-label': {
+                                        fontSize: '13px',
+                                    },
+                                    '& .Mui-checked': {
+                                        color: '#ff5252'
+                                    },
+                                }}
+                            />
                         </div>
                     </div>
                 </div>
@@ -134,34 +136,34 @@ const Footer = () => {
                     <ul className='list flex items-center gap-3 pb-2 lg:pb-0'>
                         <li className='list-none'>
                             <Link to='/' className='link'>
-                               <CiFacebook className='text-[30px]'/>
+                                <CiFacebook className='text-[30px]' />
                             </Link>
                         </li>
                         <li className='list-none'>
                             <Link to='/' className='link'>
-                               <CiYoutube className='text-[30px]'/>
+                                <CiYoutube className='text-[30px]' />
                             </Link>
                         </li>
                         <li className='list-none'>
                             <Link to='/' className='link'>
-                               <AiOutlinePinterest className='text-[30px]'/>
+                                <AiOutlinePinterest className='text-[30px]' />
                             </Link>
                         </li>
                         <li className='list-none'>
                             <Link to='/' className='link'>
-                               <CiInstagram className='text-[29px]'/>
+                                <CiInstagram className='text-[29px]' />
                             </Link>
-                        </li>   
+                        </li>
                     </ul>
 
                     <p className='text-[14px] text-center'>&copy; 2026 - Ecommerce Template</p>
 
                     <div className='flex items-center'>
-                        <img src="/carte_bleue.png" alt='image'/>
-                        <img src="/visa.png" alt='image'/>
-                        <img src="/master_card.png" alt='image'/>
-                        <img src="/american_express.png" alt='image'/>
-                        <img src="/paypal.png" alt='image'/>
+                        <img src="/carte_bleue.png" alt='image' />
+                        <img src="/visa.png" alt='image' />
+                        <img src="/master_card.png" alt='image' />
+                        <img src="/american_express.png" alt='image' />
+                        <img src="/paypal.png" alt='image' />
                     </div>
                 </div>
             </div>

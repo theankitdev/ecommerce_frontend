@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@plugin 'tailwind-scrollbar';
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -12,6 +12,9 @@ body {
 ::-webkit-scrollbar-thumb{background: #ff5252}
 ::-webkit-scrollbar-track{background: #fff};
 
+.sidebar .scroll::-webkit-scrollbar{width: 5px !important; height: 5px !important}
+.sidebar .scroll::-webkit-scrollbar-thumb{background: #ccc;}
+
 .container {
   width: 100%;
   max-width: 1600px;
@@ -23,8 +26,8 @@ body {
 
 @media(max-width: 768px) {
   .container {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
 }
 
@@ -106,3 +109,56 @@ body {
     display: none !important;
 }
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #ff5252 !important;
+}
+
+.homeBannerV2 .swiper-slide-active .info{right: 0; opacity: 1;}
+.homeBannerV2 .swiper-slide-active .info h4{right: 0; opacity: 1;}
+.homeBannerV2 .swiper-slide-active .info h2{right: 0; opacity: 1;}
+.homeBannerV2 .swiper-slide-active .info h3{right: 0; opacity: 1;}
+.homeBannerV2 .swiper-slide-active .info .btn{right: 0; opacity: 1;}
+
+.ReactCollapse--collapse {
+  transition: height 400ms;
+}
+
+.range-slider{height: 3px !important}
+
+.range-slider .range-slider__thumb{
+  width: 14px !important; 
+  height: 14px !important;
+}
+
+.range-slider .range-slider__thumb, .range-slider__range{
+  background-color: #ff5252 !important;
+}
+
+.zoomProductSlider .swiper-button-next,
+.zoomProductSlider .swiper-button-prev {
+  width: 100% !important;
+  left: 0 !important;        
+  right: 0 !important;     
+  margin: 0 !important;
+  border-radius: 0;
+}
+
+.zoomProductSlider .swiper-button-prev {
+  top: 0 !important;
+}
+
+.zoomProductSlider .swiper-button-next {
+  bottom: 0 !important;
+  top: auto !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.reviewScroll::-webkit-scrollbar{width: 5px !important};
+.reviewScroll::-webkit-scrollbar-thumb{background: #ccc !important}

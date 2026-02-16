@@ -54,7 +54,7 @@ const Header = () => {
             </div>
 
             {/* HEADER */}
-            <div className='header border-b border-b-gray-300 py-1'>
+            <div className='header lg:border-b lg:border-b-gray-300  h-14 lg:h-22 flex items-center'>
                 <div className='container flex items-center justify-between'>
 
                     {/* Category Hamburger only visible in mobile */}
@@ -72,7 +72,7 @@ const Header = () => {
                     </div>
 
                     <div className='col1 w-full lg:w-[25%] flex justify-center lg:justify-start'>
-                        <Link to={"/"}><img src='/logo.jpg' className='h-11 lg:h-18 w-29 lg:w-38 object-cover ' /></Link>
+                        <Link to={"/"}><img src='/logo.png' className='w-full h-11 object-cover ' /></Link>
                     </div>
 
                     <div className='col2  w-[45%] hidden lg:block'>
