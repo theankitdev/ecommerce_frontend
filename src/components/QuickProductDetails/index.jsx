@@ -1,54 +1,52 @@
-import React, { useState } from 'react';
-import { useParams, Link } from "react-router-dom";
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import ProductZoom from '../components/ProductZoom';
-import products from "../data/product.js";
-import Rating from '@mui/material/Rating';
+import React from 'react';
 import Button from '@mui/material/Button';
-import QtyBox from '../components/QtyBox/index.jsx';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import { useSelector, useDispatch } from 'react-redux';
+import { closeProductDetail } from "../../features/productDetailModel/productDetailSlice";
+import ProductZoom from '../../components/ProductZoom'
+import productData from '../../data/product'
+import { useState } from 'react'
+import { IoCloseSharp } from "react-icons/io5";
+import Rating from '@mui/material/Rating';
+import QtyBox from '../../components/QtyBox';
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaHeart } from "react-icons/fa";
-import ProductTabs from '../components/ProductTabs/index.jsx';
-import ProductSlider from '../components/ProductSlider/index.jsx';
 
-const ProductDetail = () => {
-  const { id } = useParams();
+const product = productData.find(
+  item => item.id === Number(1)
+)
+
+const QuickProductdetail = () => {
+  const dispatch = useDispatch();
+  const { open, } = useSelector((state) => state.productDetail);
+  const [fullWidth, setFullWidth] = useState(true)
+  const [maxWidth, setMaxWidth] = useState("lg");
   const [selectedSize, setSelectedSize] = useState(null);
   const [wishlist, setWishlist] = useState(false);
 
-  // convert id to number (important)
-  const product = products.find(
-    item => item.id === Number(id)
-  );
-
-  // safety check
-  if (!product) {
-    return <div className="container py-10">Product Not Found</div>;
-  }
-
   return (
-    <>
-      <div className='pt-5'>
+    <Dialog
+        open={open}
+        fullWidth={fullWidth}
+        maxWidth={maxWidth}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description" >
+        <DialogContent>
+          <div className="flex items-center w-full gap-6 py-5">
+            <Button className='w-[40px]! h-[40px]! min-w-[40px]! rounded-full! text-black! absolute! top-[8px] right-[8px]'
+              onClick={() => dispatch(closeProductDetail())}
+            >
+              <IoCloseSharp className='text-[20px]' />
+            </Button>
 
-        {/* BreadCrumb */}
-        <div className='container mb-3'>
-          <Breadcrumbs>
-            <Link to="/" className='link'>Home</Link>
-            <Link to="/" className='link'>Fashion</Link>
-            <span>{product.title}</span>
-          </Breadcrumbs>
-        </div>
-
-        <section className='bg-white py-5'>
-          <div className='container flex-col flex md:flex-row gap-8 items-center'>
-
-            {/* Left - Image */}
-            <div className='productZoomContainer w-full md:w-[35%]'>
+            {/* Image Section */}
+            <div className='col1 w-[40%]'>
               <ProductZoom product={product} />
             </div>
 
-            {/* Right - Info */}
-            <div className='md:w-[65%]'>
+            {/* Details Section */}
+            <div className='col2 md:w-[60%] px-4'>
 
               <h2 className="text-2xl font-semibold mb-2">
                 {product.title}
@@ -149,23 +147,10 @@ const ProductDetail = () => {
                 </span>
               </div>
             </div>
-
           </div>
+        </DialogContent>
+      </Dialog>
+  )
+}
 
-          {/* Description , Details & Review Tabs */}
-          <div className='container my-8'>
-            <ProductTabs product={product}/>
-          </div>
-
-          {/* Related Product */}
-          <div className='container'>
-          <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Related Products</h2>
-          <ProductSlider products={products}/>
-        </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default ProductDetail;
+export default QuickProductdetail

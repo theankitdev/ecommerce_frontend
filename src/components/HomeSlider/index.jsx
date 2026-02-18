@@ -17,7 +17,7 @@ const HomeSlider = () => {
                     }}
                     navigation={true}
                     modules={[Autoplay, Navigation]}
-                    className="mySwiper !overflow-visible"
+                    className="mySwiper"
                 >
                     <SwiperSlide>
                         <div className='item rounded-xl overflow-hidden'>

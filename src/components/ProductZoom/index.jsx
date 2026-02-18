@@ -10,7 +10,7 @@ const ProductZoom = ({ product }) => {
   const zoomSliderBig = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const images = [1,2,3,4,5,6,7];
+  const images = product?.images || [];
 
   const goto = (index) => {
     if (zoomSliderBig.current) {
@@ -32,14 +32,14 @@ const ProductZoom = ({ product }) => {
           modules={[Navigation]}
           className="zoomProductSlider smlBtn h-full!"
         >
-          {images.map((_, i) => (
+          {images.map((img, i) => (
             <SwiperSlide
               key={i}
               className="!h-[90px] cursor-pointer"
               onClick={() => goto(i)}
             >
               <img
-                src={product.img1}
+                src={img}
                 className={`w-full h-full object-cover rounded-md transition-opacity duration-300 ${
                   activeIndex === i ? 'opacity-100' : 'opacity-40'
                 }`}
@@ -57,12 +57,12 @@ const ProductZoom = ({ product }) => {
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
           className="h-full"
         >
-          {images.map((_, i) => (
+          {images.map((img, i) => (
             <SwiperSlide key={i}>
               <InnerImageZoom
                 zoomType="hover"
                 zoomScale={1}
-                src={product.img1}
+                src={img}
               />
             </SwiperSlide>
           ))}

@@ -3,20 +3,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import 'swiper/css/navigation';
 import { Navigation } from 'swiper/modules';
-import products from "../../data/product";
 import ProductItem from '../ProductItem/index';
 
-const ProductSlider = () => {
+const ProductSlider = ({ products }) => {
   return (
-    <div className="productSlider py-3 lg:py-6 overflow-hidden">
+    <div className="productSlider py-3 lg:py-6">
       <Swiper
         spaceBetween={12}
         navigation={true}
         slidesPerView="auto"
-        className="!overflow-visible smlBtn"
         modules={[Navigation]}
       >
-        {products.map(product => (
+        {products?.map(product => (
           <SwiperSlide key={product.id} className='w-[160px]! sm:!w-auto'>
             <ProductItem product={product} />
           </SwiperSlide>

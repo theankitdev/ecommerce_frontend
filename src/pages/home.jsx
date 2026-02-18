@@ -10,6 +10,7 @@ import ProductSlider from '../components/ProductSlider';
 import BlogSection from '../components/Blog';
 import HomeBannerV2 from '../components/HomeBannerV2';
 import AdsBannerV2 from '../components/AdsBannerV2';
+import products from "../data/product.js"
 
 const Home = () => {
   const [value, setValue] = React.useState(0);
@@ -25,14 +26,14 @@ const Home = () => {
 
       {/* Popular Product Section */}
       <section className='bg-white py-3 md:py-8'>
-        <div className='container'>
+        <div className='pl-[14px] md:pl-[24px]'>
           <div className='flex flex-col lg:flex-row lg:justify-between whitespace-nowrap lg:gap-5'>
             <div className='leftSec'>
               <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Popular Products</h2>
               <p className='lg:text-[14px] text-[12px] md:text-[13px]'>Do not miss the current offers until the end of March.</p>
             </div>
 
-            <div className="rightSec lg:w-[60%] ">
+            <div className="rightSec lg:w-[60%] pr-[14px] md:pr-[24px]">
               <Box sx={{ bgcolor: 'background.paper' }}>
                 <Tabs
                   value={value}
@@ -63,7 +64,7 @@ const Home = () => {
             </div>
           </div>
 
-          <ProductSlider />
+          <ProductSlider products={products}/>
         </div>
       </section>
 
@@ -135,74 +136,76 @@ const Home = () => {
 
       {/* Latest Product Section */}
       <section className='py-2 bg-white'>
-        <div className='container'>
+        <div className='pl-[14px] md:pl-[24px]'>
           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Latest Products</h2>
-          <ProductSlider />
+          <ProductSlider products={products}/>
         </div>
       </section>
 
       {/* Featured Product Section */}
-      <section className='pb-2 bg-white'>
-        <div className='container'>
+      <section className='bg-white'>
+        <div className='pl-[14px] md:pl-[24px]'>
           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Featured Products</h2>
-          <ProductSlider />
-
-          <AdsBanner items={4} />
+          <ProductSlider products={products}/>
         </div>
       </section>
 
+      <div className='container bg-white pb-2'>
+        <AdsBanner items={4} />
+      </div>
+
       {/* Jewellery Section */}
       <section className='pb-2 bg-white'>
-        <div className='container'>
+        <div className='pl-[14px] md:pl-[24px]'>
           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Jewellery</h2>
-          <ProductSlider />
+          <ProductSlider products={products}/>
         </div>
       </section>
 
       {/* Wellness Section */}
       <section className='pb-2 bg-white'>
-        <div className='container'>
+        <div className='pl-[14px] md:pl-[24px]'>
           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Wellness</h2>
-          <ProductSlider />
+          <ProductSlider products={products}/>
         </div>
       </section>
 
       {/* Beauty Section */}
       <section className='pb-2 bg-white'>
-        <div className='container'>
+        <div className='pl-[14px] md:pl-[24px]'>
           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Beauty</h2>
-          <ProductSlider />
+          <ProductSlider products={products}/>
         </div>
       </section>
 
       {/* Bags Section */}
       <section className='pb-2 bg-white'>
-        <div className='container'>
+        <div className='pl-[14px] md:pl-[24px]'>
           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Bags</h2>
-          <ProductSlider />
+          <ProductSlider products={products}/>
         </div>
       </section>
 
       {/* Groceries Section */}
       <section className='pb-2 bg-white'>
-        <div className='container'>
+        <div className='pl-[14px] md:pl-[24px]'>
           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Groceries</h2>
-          <ProductSlider />
+          <ProductSlider products={products}/>
         </div>
       </section>
 
       {/* Electronics Section */}
       <section className='pb-2 bg-white'>
-        <div className='container'>
+        <div className='pl-[14px] md:pl-[24px]'>
           <h2 className='lg:text-[20px] text-[14px] md:text-[16px] font-[600]'>Electronics</h2>
-          <ProductSlider />
+          <ProductSlider products={products}/>
         </div>
       </section>
 
       {/* Blog Section */}
       <section className='bg-white'>
         <div className='container'>
-          <BlogSection />
+          <ProductSlider products={products}/>
         </div>
       </section>
     </>
