@@ -6,12 +6,13 @@ import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { FaRegHeart } from "react-icons/fa";
-import { BiGitCompare } from "react-icons/bi";
 import Tooltip from '@mui/material/Tooltip';
 import Navigation from '../Navigation';
 import Button from '@mui/material/Button'
 import { RiMenu2Fill } from "react-icons/ri";
 import CategoryPanel from '../Navigation/CategoryPanel.jsx';
+import { useDispatch } from 'react-redux';
+import { openCart } from '../../features/cart/cartSlice.js';
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
     '& .MuiBadge-badge': {
@@ -25,6 +26,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const Header = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const dispatch = useDispatch();
 
     return (
         <header className="bg-white shadow-md">
@@ -98,7 +100,7 @@ const Header = () => {
 
                             <li className='list-none'>
                                 <Tooltip title="Cart">
-                                    <IconButton aria-label="cart">
+                                    <IconButton aria-label="cart" onClick={()=>dispatch(openCart())}>
                                         <StyledBadge badgeContent={4} color="secondary">
                                             <MdOutlineShoppingCart />
                                         </StyledBadge>

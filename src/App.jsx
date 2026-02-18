@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import ProductDetail from './pages/productDetail'
 import QuickProductDetail from './components/QuickProductDetails'
 import Register from './pages/register'
+import CartDrawer from './components/CartDrawer'
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
       <Footer />
 
       <QuickProductDetail />
+
+      <CartDrawer />
     </>
   )
 }
